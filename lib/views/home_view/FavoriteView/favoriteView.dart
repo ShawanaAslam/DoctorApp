@@ -83,15 +83,16 @@ import 'package:flutter/material.dart';
 import '../../../controller/widgets/helCenterField.dart';
 import '../../../controller/widgets/profileFormFieldWidget.dart';
 import '../../../controller/widgets/text_widget.dart';
+import 'FavoriteViewWidget/doctorTabWidget.dart';
 
-class AllAppointmentView extends StatefulWidget {
-  const AllAppointmentView({super.key});
+class FavoriteView extends StatefulWidget {
+  const FavoriteView({super.key});
 
   @override
-  State<AllAppointmentView> createState() => _AllAppointmentViewState();
+  State<FavoriteView> createState() => _FavoriteViewState();
 }
 
-class _AllAppointmentViewState extends State<AllAppointmentView>
+class _FavoriteViewState extends State<FavoriteView>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
@@ -114,7 +115,7 @@ class _AllAppointmentViewState extends State<AllAppointmentView>
     return Scaffold(
       appBar: AppBar(
         title: TextWidget(
-          txt: 'All Appointment',
+          txt: 'Favourites',
           clr: Colors.black,
           fntwt: FontWeight.w500,
         ),
@@ -141,9 +142,9 @@ class _AllAppointmentViewState extends State<AllAppointmentView>
                 insets: EdgeInsets.symmetric(horizontal: -30),
               ),
               tabs: [
-                Tab(text: 'Upcoming'),
-                Tab(text: 'Completed'),
-                Tab(text: 'Canceled'),
+                Tab(text: 'Doctor'),
+                Tab(text: 'Pharmacy'),
+                Tab(text: 'Ambulace'),
               ],
             ),
             Expanded(
@@ -154,37 +155,32 @@ class _AllAppointmentViewState extends State<AllAppointmentView>
                   /////////////////////////////////////////////////////////////
 
                   // first tab (upcoming) with vertical scroll
-              SingleChildScrollView(
-                child: Column(
-                  children: [
-                    SizedBox(height: 20,),
-                ContainerWidget(),
-                    SizedBox(height: 10,),
-                    ContainerWidget(),
-                    SizedBox(height: 10,),
-                    ContainerWidget()
-                  ],
-                ),
-              ),
+                  SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        SizedBox(height: 20,),
+                      DoctorTabWidget(),
+                        SizedBox(height: 10,),
+                        DoctorTabWidget(),
+                        SizedBox(height: 10,),
+                        DoctorTabWidget(),
+                      ],
+                    ),
+                  ),
 
 
-                 //////////////////////////////////////////////////////////////////
+                  //////////////////////////////////////////////////////////////////
 
                   //  Second tab (Completed)
 
                   SingleChildScrollView(
                     child: Column(
                       children: [
-                        SizedBox(height: 20,),
-                        ContainerWidget(),
-                        SizedBox(height: 10,),
-                        ContainerWidget(),
-                        SizedBox(height: 10,),
-                        ContainerWidget()
+
                       ],
                     ),
                   ),
-                  
+
 
                   /////////////////////////////////////////////////////////////
 
@@ -192,12 +188,7 @@ class _AllAppointmentViewState extends State<AllAppointmentView>
                   SingleChildScrollView(
                     child: Column(
                       children: [
-                        SizedBox(height: 20,),
-                       CancelTabWidget(),
-                        SizedBox(height: 10,),
-                        CancelTabWidget(),
-                        SizedBox(height: 10,),
-                        CancelTabWidget(),
+
                       ],
                     ),
                   ),

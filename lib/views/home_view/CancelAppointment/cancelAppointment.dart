@@ -25,7 +25,7 @@ class _CancelAppointmentViewState extends State<CancelAppointmentView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: TextWidget(txt: 'Search Filter',clr: Colors.black,fntwt: FontWeight.w500,),
+        title: TextWidget(txt: 'Cancel Appointment',clr: Colors.black,fntwt: FontWeight.w500,),
         centerTitle: true,
         leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
       ),

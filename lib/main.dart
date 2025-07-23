@@ -2,8 +2,11 @@ import 'package:doctorapp/views/auth_view/setpasword/setPasword.dart';
 import 'package:doctorapp/views/auth_view/signUp_view/signup_view.dart';
 import 'package:doctorapp/views/auth_view/verificationview/verificationView.dart';
 import 'package:doctorapp/views/home_view/AllAppointmentView/allAppointmentView.dart';
+import 'package:doctorapp/views/home_view/AppointmentView/appointmentView.dart';
 //import 'package:doctorapp/views/home_view/Appointment%20View/appointmentView.dart';
 import 'package:doctorapp/views/home_view/CancelAppointment/cancelAppointment.dart';
+import 'package:doctorapp/views/home_view/FavoriteView/favoriteView.dart';
+import 'package:doctorapp/views/home_view/PaymentOptionsView/paymentOptionsView.dart';
 import 'package:doctorapp/views/home_view/callView.dart';
 import 'package:doctorapp/views/home_view/chatView.dart';
 import 'package:doctorapp/views/home_view/docotrsView.dart';
@@ -57,9 +60,11 @@ class MyApp extends StatelessWidget {
       ),
 
       home:
-        AllAppointmentView()
+        PaymentOptionsView()
+        //FavoriteView()
+        //AllAppointmentView()
        //AppointmentView()
-        //CancelAppointmentView()
+       // CancelAppointmentView()
         //FilterView()
        // PaswordManagerView()
         //SettingView()
