@@ -85,7 +85,7 @@
 
 
 import 'package:doctorapp/controller/widgets/button_widget.dart';
-import 'package:doctorapp/views/home_view/home_view.dart';
+import 'package:doctorapp/views/home_view/DashBoardView/dashBoardView.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -270,7 +270,7 @@ SizedBox(width: 30,),
 
               ButtonWidget(txt: 'Change Pasword', ontp: (){
 
-                Get.to(HomeView());
+                Get.to(DashBoardView());
                 if (_formKey.currentState!.validate()) {
                   // Validation passed
                   print("Password: ${passwordController.text}");

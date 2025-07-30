@@ -1,4 +1,5 @@
 
+import 'package:doctorapp/controller/constants/colors.dart';
 import 'package:doctorapp/views/starting_view/onboaring_view/onboarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,13 +28,19 @@ class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green,
+      backgroundColor: AppColors.greenColor,
       body:Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 500,),
+            SizedBox(height: 200,),
+            CircleAvatar(
+              radius: 45,
+              child: Icon(Icons.add,color: Colors.white,size: 60,weight: 100,),
+              backgroundColor: AppColors.greenColor,
+            ),
+           SizedBox(height: 250,),
             TextWidget(txt: 'MyDoctor App',fntsze: 26,),
             TextWidget(txt: 'we care about your health',fntsze: 12,
               fntwt: FontWeight.w600,)

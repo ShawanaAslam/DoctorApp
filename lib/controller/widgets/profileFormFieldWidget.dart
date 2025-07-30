@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 class ProfileFormfieldwidget extends StatelessWidget {
   String txt;
   String? txt1;
+ // String? txt2;
   IconData? icn;
   IconData? icn1;
    ProfileFormfieldwidget({super.key,
   required this.txt,
      this.txt1,
+     //this.txt2
      this.icn,
      this.icn1
   });
@@ -17,6 +19,9 @@ class ProfileFormfieldwidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
+       // suffix: Text(''),
+          filled: true,
+          fillColor: Colors.white,
         prefixIcon: icn1 != null ? Icon(icn1, color: Colors.green) : null,
         suffixIcon:  icn != null ? Icon(icn, color: Colors.green) : null,
         hintText: txt,

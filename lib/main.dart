@@ -1,18 +1,27 @@
+import 'package:doctorapp/views/auth_view/login_view/loginView.dart';
 import 'package:doctorapp/views/auth_view/setpasword/setPasword.dart';
 import 'package:doctorapp/views/auth_view/signUp_view/signup_view.dart';
 import 'package:doctorapp/views/auth_view/verificationview/verificationView.dart';
+import 'package:doctorapp/views/home_view/AddCardView/addCardView.dart';
 import 'package:doctorapp/views/home_view/AllAppointmentView/allAppointmentView.dart';
 import 'package:doctorapp/views/home_view/AppointmentView/appointmentView.dart';
 //import 'package:doctorapp/views/home_view/Appointment%20View/appointmentView.dart';
 import 'package:doctorapp/views/home_view/CancelAppointment/cancelAppointment.dart';
+//import 'package:doctorapp/views/home_view/DoctorFilterView/loadingView.dart';
 import 'package:doctorapp/views/home_view/FavoriteView/favoriteView.dart';
-import 'package:doctorapp/views/home_view/PaymentOptionsView/paymentOptionsView.dart';
+import 'package:doctorapp/views/home_view/LoadingView/loadingView.dart';
+import 'package:doctorapp/views/home_view/PaymentOptinsView/paymentOptionsView.dart';
+import 'package:doctorapp/views/home_view/PaymentView/paymentView.dart';
+import 'package:doctorapp/views/home_view/ReviewSummrayView/reviewSummaryView.dart';
+import 'package:doctorapp/views/home_view/SearchResultView/searchResultView.dart';
+//import 'package:doctorapp/views/home_view/PaymentOptionsView/paymentOptionsView.dart';
 import 'package:doctorapp/views/home_view/callView.dart';
 import 'package:doctorapp/views/home_view/chatView.dart';
-import 'package:doctorapp/views/home_view/docotrsView.dart';
+import 'package:doctorapp/views/home_view/DoctorsView/docotrsView.dart';
+import 'package:doctorapp/views/home_view/DoctorDetailView/doctorDetailView.dart';
 import 'package:doctorapp/views/home_view/filterView/filterView.dart';
 import 'package:doctorapp/views/home_view/helpCenterView/helpCenterView.dart';
-import 'package:doctorapp/views/home_view/home_view.dart';
+import 'package:doctorapp/views/home_view/DashBoardView/dashBoardView.dart';
 import 'package:doctorapp/views/home_view/newAppointmentview.dart';
 import 'package:doctorapp/views/home_view/notificationView/notificationView.dart';
 import 'package:doctorapp/views/home_view/paswordManagerView/paswordManagerView.dart';
@@ -20,6 +29,7 @@ import 'package:doctorapp/views/home_view/privacyView/privacyView.dart';
 import 'package:doctorapp/views/home_view/profileView/profileView.dart';
 import 'package:doctorapp/views/home_view/profileView/profileViewTwo.dart';
 import 'package:doctorapp/views/home_view/settingView/settingView.dart';
+//import 'package:doctorapp/views/starting_view/LoginView/loginView.dart';
 import 'package:doctorapp/views/starting_view/onboaring_view/onboarding_view.dart';
 import 'package:doctorapp/views/starting_view/splash_view/splash_view.dart';
 import 'package:doctorapp/views/starting_view/welcome_view/welcome_view.dart';
@@ -60,7 +70,14 @@ class MyApp extends StatelessWidget {
       ),
 
       home:
-        PaymentOptionsView()
+       // DoctorDetailView()
+       // LoginView()
+        //LoadingView()
+        //SearchResultView()
+       // PaymentView()
+        //ReviewSummaryView()
+         // AddCardView()
+        //PaymentOptionsView()
         //FavoriteView()
         //AllAppointmentView()
        //AppointmentView()
@@ -76,12 +93,12 @@ class MyApp extends StatelessWidget {
         //ChatView()
         //CallView()
        // NewAppointmentview()
-        //DoctorsView()
-        //HomeView()
+       // DoctorsView()
+        //DashBoardView()
       //  SetPasword()
        // Verificationview()
        // SignupView()
-      //WelcomeView()
+      WelcomeView()
       //OnboardingScreen()
       //SplashView()
       //const MyHomePage(title: 'Flutter Demo Home Page'),
