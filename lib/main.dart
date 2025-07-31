@@ -1,3 +1,4 @@
+import 'package:doctorapp/controller/routing/routing.dart';
 import 'package:doctorapp/views/auth_view/login_view/loginView.dart';
 import 'package:doctorapp/views/auth_view/setpasword/setPasword.dart';
 import 'package:doctorapp/views/auth_view/signUp_view/signup_view.dart';
@@ -69,7 +70,10 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
 
-      home:
+initialRoute: '/splash',
+     getPages: AppRoutes.routes,
+
+     // home:
        // DoctorDetailView()
        // LoginView()
         //LoadingView()
@@ -98,7 +102,7 @@ class MyApp extends StatelessWidget {
       //  SetPasword()
        // Verificationview()
        // SignupView()
-      WelcomeView()
+      //WelcomeView()
       //OnboardingScreen()
       //SplashView()
       //const MyHomePage(title: 'Flutter Demo Home Page'),
