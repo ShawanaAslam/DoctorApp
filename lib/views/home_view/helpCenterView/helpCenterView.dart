@@ -1,6 +1,8 @@
 
 import 'package:doctorapp/controller/widgets/selectedButton.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../../controller/widgets/helCenterField.dart';
 import '../../../controller/widgets/profileFormFieldWidget.dart';
@@ -42,7 +44,9 @@ class _HelpCenterViewState extends State<HelpCenterView>
         ),
         centerTitle: true,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.back();
+          },
           icon: Icon(Icons.arrow_back),
         ),
       ),

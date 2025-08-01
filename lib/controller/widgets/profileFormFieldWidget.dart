@@ -6,14 +6,18 @@ class ProfileFormfieldwidget extends StatelessWidget {
   String? txt1;
  // String? txt2;
   IconData? icn;
+//VoidCallback ontp;
   IconData? icn1;
    ProfileFormfieldwidget({super.key,
   required this.txt,
      this.txt1,
+  //required this.ontp,
      //this.txt2
      this.icn,
      this.icn1
   });
+
+  final FocusNode _focusNode = FocusNode();
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +48,8 @@ class ProfileFormfieldwidget extends StatelessWidget {
       child: Text(
       txt1??'',
       style: TextStyle(
-      color: Colors.green,
+     color: Colors.green,
+      //  color: _focusNode.hasFocus ? Colors.green : Colors.green,
       //fontWeight: FontWeight.bold,
       ),
         ),

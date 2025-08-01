@@ -2,6 +2,8 @@
 import 'package:doctorapp/controller/widgets/button_widget.dart';
 import 'package:doctorapp/controller/widgets/profileFormFieldWidget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../../controller/widgets/text_widget.dart';
 
@@ -19,7 +21,9 @@ class _ProfileViewTwoState extends State<ProfileViewTwo> {
         appBar: AppBar(
         title: TextWidget(txt: 'Profile',clr: Colors.black,fntwt: FontWeight.w500,),
     centerTitle: true,
-    leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
+    leading: IconButton(onPressed: (){
+      Get.back();
+    }, icon: Icon(Icons.arrow_back)),
     ),
     body: Center(
     child: Padding(

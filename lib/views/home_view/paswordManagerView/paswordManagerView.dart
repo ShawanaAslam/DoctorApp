@@ -118,7 +118,9 @@ class _PaswordManagerViewState extends State<PaswordManagerView> {
           fntwt: FontWeight.w500,
         ),
         centerTitle: true,
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios)),
+        leading: IconButton(onPressed: (){
+          Get.back();
+        }, icon: Icon(Icons.arrow_back_ios)),
       ),
       body: SingleChildScrollView(
         child: Column(

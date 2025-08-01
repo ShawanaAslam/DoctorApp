@@ -1,8 +1,11 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../../controller/widgets/profileRow.dart';
 import '../../../controller/widgets/text_widget.dart';
+import '../paswordManagerView/paswordManagerView.dart';
 
 class SettingView extends StatefulWidget {
   const SettingView({super.key});
@@ -23,7 +26,9 @@ class _SettingViewState extends State<SettingView> {
         ),
         centerTitle: true,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.back();
+          },
           icon: Icon(Icons.arrow_back),
         ),
       ),
@@ -35,7 +40,9 @@ body:
             SizedBox(height: 10,),
             ProfileRow(ontp: () { },txt: 'Notificatoin Settings', icn: Icons.notification_important_outlined),
             Divider(),
-            ProfileRow(ontp: () { },txt: 'Password Manager', icn: Icons.key),
+            ProfileRow(ontp: () {
+              Get.to(()=>PaswordManagerView());
+            },txt: 'Password Manager', icn: Icons.key),
             Divider(),
             ProfileRow(ontp: () { },txt: 'Delete Account', icn: Icons.lock_outline),
             Divider(),

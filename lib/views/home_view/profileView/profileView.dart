@@ -1,7 +1,17 @@
 
 import 'package:doctorapp/controller/widgets/profileRow.dart';
 import 'package:doctorapp/controller/widgets/text_widget.dart';
+import 'package:doctorapp/views/home_view/PaymentOptinsView/paymentOptionsView.dart';
+import 'package:doctorapp/views/home_view/PaymentView/paymentView.dart';
+import 'package:doctorapp/views/home_view/helpCenterView/helpCenterView.dart';
+import 'package:doctorapp/views/home_view/paswordManagerView/paswordManagerView.dart';
+import 'package:doctorapp/views/home_view/privacyView/privacyView.dart';
+import 'package:doctorapp/views/home_view/profileView/profileViewTwo.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+import '../settingView/settingView.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
@@ -40,27 +50,42 @@ body: Center(
               child: CircleAvatar(
                 radius: 20,
                   backgroundColor: Colors.green[300],
-                  child: Icon(Icons.edit,color: Colors.white,size: 20,)),
-
+                  child: IconButton(onPressed: (){
+                   // Get.toNamed('')
+                    Get.to(()=>ProfileViewTwo());
+                  }, icon: Icon(Icons.edit),
+                    color: Colors.white,),
+              )
             ),
           ],
         ),
        SizedBox(height: 20,),
         TextWidget(txt: 'Adeowle Abdulazez',clr: Colors.black,fntwt: FontWeight.w500,),
         SizedBox(height: 40,),
-       ProfileRow(txt: 'Profile', icn: Icons.person_outline_outlined, ontp: () {  },),
+       ProfileRow(txt: 'Profile', icn: Icons.person_outline_outlined,
+         ontp: () {  },),
         Divider(),
         ProfileRow(txt: 'Favourite', icn: Icons.heart_broken, ontp: () { },),
         Divider(),
-        ProfileRow(ontp: () { },txt: 'Help Center', icn: Icons.help_outline),
+        ProfileRow(ontp: () {
+          Get.to(()=>HelpCenterView());
+        },txt: 'Help Center', icn: Icons.help_outline),
         Divider(),
-        ProfileRow(ontp: () { },txt: 'Privacy Policy', icn: Icons.privacy_tip_outlined),
+        ProfileRow(ontp: () {
+          Get.to(()=>PrivacyView());
+        },txt: 'Privacy Policy', icn: Icons.privacy_tip_outlined),
         Divider(),
-        ProfileRow(ontp: () { },txt: 'Setting', icn: Icons.settings),
+        ProfileRow(ontp: () {
+          Get.to(()=>SettingView());
+        },txt: 'Setting', icn: Icons.settings),
         Divider(),
-        ProfileRow(ontp: () { },txt: 'Payment Options', icn: Icons.payment),
+        ProfileRow(ontp: () {
+          Get.to(()=>PaymentOptionsView());
+        },txt: 'Payment Options', icn: Icons.payment),
         Divider(),
-        ProfileRow(ontp: () { },txt: 'Pasword Manager', icn: Icons.lock_outline),
+        ProfileRow(ontp: () {
+          Get.to(()=>PaswordManagerView());
+        },txt: 'Pasword Manager', icn: Icons.lock_outline),
         Divider(),
         ProfileRow(ontp: () {
 
