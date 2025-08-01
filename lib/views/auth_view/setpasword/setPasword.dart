@@ -1,5 +1,6 @@
 
 import 'package:doctorapp/controller/widgets/button_widget.dart';
+import 'package:doctorapp/controller/widgets/paswordFormField.dart';
 import 'package:doctorapp/views/home_view/DashBoardView/dashBoardView.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -51,37 +52,7 @@ class _SetPaswordState extends State<SetPasword> {
            ]
         ),
         SizedBox(height: 5,),
-        Padding(
-          padding: const EdgeInsets.only(left: 25,right: 25),
-          child: TextFormField(
-            controller: passwordController,
-            obscureText: _obscurePassword,
-            decoration: InputDecoration(
-             // labelText: 'Password',
-
-              border: OutlineInputBorder(),
-              suffixIcon: IconButton(
-                icon: Icon(
-                  _obscurePassword ? Icons.visibility_off : Icons.visibility,
-                ),
-                onPressed: () {
-                  setState(() {
-                    _obscurePassword = !_obscurePassword;
-                  });
-                },
-              ),
-            ),
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return 'Please enter password';
-              }
-              if (value.length < 6) {
-                return 'Password must be at least 6 characters';
-              }
-              return null;
-            },
-          ),
-        ),
+        PaswordFormField(),
         SizedBox(height: 10),
 
         // Confirm Password Field
@@ -94,36 +65,8 @@ class _SetPaswordState extends State<SetPasword> {
             ]
         ),
         SizedBox(height: 5),
-        Padding(
-          padding: const EdgeInsets.only(left: 25,right: 25),
-          child: TextFormField(
-            controller: confirmPasswordController,
-            obscureText: _obscureConfirm,
-            decoration: InputDecoration(
-            //  labelText: 'Confirm Password',
-              border: OutlineInputBorder(),
-              suffixIcon: IconButton(
-                icon: Icon(
-                  _obscureConfirm ? Icons.visibility_off : Icons.visibility,
-                ),
-                onPressed: () {
-                  setState(() {
-                    _obscureConfirm = !_obscureConfirm;
-                  });
-                },
-              ),
-            ),
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return 'Please confirm password';
-              }
-              if (value != passwordController.text) {
-                return 'Passwords do not match';
-              }
-              return null;
-            },
-          ),
-        ),
+        PaswordFormField(),
+
         SizedBox(height: 30),
 
         ButtonWidget(txt: 'Create New Pasword', ontp: (){

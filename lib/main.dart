@@ -76,7 +76,8 @@ class MyApp extends StatelessWidget {
 
 
         home:
-        BottomNavView()
+       //SetPasword()
+       BottomNavView()
        // DoctorDetailView()
        // LoginView()
         //LoadingView()

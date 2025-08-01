@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import '../../../controller/widgets/paswordFormField.dart';
 import '../../../controller/widgets/text_widget.dart';
 import 'LoginWidget/fingerPrintWidget.dart';
 
@@ -33,95 +34,69 @@ class _LoginViewState extends State<LoginView> {
       ),
       body: SingleChildScrollView(
         child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              // mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(height: 10,),
-                  TextWidget(txt: 'Hello There!',clr: Colors.black,fntsze: 20,),
-                  SizedBox(height: 30,),
+          child: Column(
 
-                  Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                       // SizedBox(width: 30,),
-                        TextWidget(txt: 'Email/Phone number',clr: Colors.black,
-                          fntwt: FontWeight.w500,),
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(height: 10,),
+                TextWidget(txt: 'Hello There!',clr: Colors.black,fntsze: 20,),
+                SizedBox(height: 30,),
 
-                      ]
-                  ),
-                  SizedBox(height: 5,),
-                 ProfileFormfieldwidget(txt: 'Enter Email or Phone Num...',),
-                  SizedBox(height: 10),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SizedBox(width: 30,),
+                      TextWidget(txt: 'Email/Phone number',clr: Colors.black,
+                        fntwt: FontWeight.w500,),
 
-                  // Confirm Password Field
-                  Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        //SizedBox(width: 30,),
-                        TextWidget(txt: 'pasword',clr: Colors.black,),
+                    ]
+                ),
+                SizedBox(height: 5,),
+               Padding(
+                 padding:  EdgeInsets.only(left: 25,right: 25),
+                 child: ProfileFormfieldwidget(txt: 'Enter Email or Phone Num...',),
+               ),
+                SizedBox(height: 10),
 
-                      ]
-                  ),
-                  SizedBox(height: 5),
-                  TextFormField(
-                    controller: confirmPasswordController,
-                    obscureText: _obscureConfirm,
-                    decoration: InputDecoration(
-                      //  labelText: 'Confirm Password',
-                      border: OutlineInputBorder(),
-                      suffixIcon: IconButton(
-                        icon: Icon(
-                          _obscureConfirm ? Icons.visibility_off : Icons.visibility,
-                        ),
-                        onPressed: () {
-                          setState(() {
-                            _obscureConfirm = !_obscureConfirm;
-                          });
-                        },
-                      ),
-                    ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please confirm password';
-                      }
-                      if (value != passwordController.text) {
-                        return 'Passwords do not match';
-                      }
-                      return null;
-                    },
-                  ),
-                  SizedBox(height: 30),
+                // Confirm Password Field
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SizedBox(width: 30,),
+                      TextWidget(txt: 'pasword',clr: Colors.black,),
 
-                  ButtonWidget(txt: 'Sign in', ontp: (){
+                    ]
+                ),
+                SizedBox(height: 5),
+                PaswordFormField(),
+                SizedBox(height: 30),
 
-                    Get.to(DashBoardView());
-                    if (_formKey.currentState!.validate()) {
-                      // Validation passed
-                      print("Password: ${passwordController.text}");
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('Password Validated!')),);}}
+                ButtonWidget(txt: 'Sign in', ontp: (){
+
+                  Get.to(DashBoardView());
+                  if (_formKey.currentState!.validate()) {
+                    // Validation passed
+                    print("Password: ${passwordController.text}");
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('Password Validated!')),);}}
 
 
-                  ),
-                  SizedBox(height: 30,),
-                  Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        //SizedBox(width: 30,),
-                        TextWidget(txt: 'Change pasword',clr: Colors.black,),
+                ),
+                SizedBox(height: 30,),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      //SizedBox(width: 30,),
+                      TextWidget(txt: 'Change pasword',clr: Colors.black,),
 
 
-                      ]
-                  ),
-                  SizedBox(height: 30,),
-                 FingerprintWidget(
-                   onTap: (){},
-                 )
-                ]),
-          ),
+                    ]
+                ),
+                SizedBox(height: 30,),
+               FingerprintWidget(
+                 onTap: (){},
+               )
+              ]),
         ),
       ),
     );
