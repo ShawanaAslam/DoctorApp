@@ -8,17 +8,12 @@ import '../../../controller/widgets/button_widget.dart';
 import '../../../controller/widgets/mytextformfield.dart';
 import '../../../controller/widgets/text_widget.dart';
 
-class Signupsec extends StatefulWidget {
-  const Signupsec({super.key});
-
-  @override
-  State<Signupsec> createState() => _SignupsecState();
-}
-
-class _SignupsecState extends State<Signupsec> {
+class Signupsec extends StatelessWidget {
+   Signupsec({super.key});
 
   @override
   TextEditingController controller=TextEditingController();
+
   Widget build(BuildContext context) {
 
     return Scaffold(
@@ -61,15 +56,15 @@ mainAxisAlignment: MainAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  backgroundImage: AssetImage('assets/google.png'),
+                  backgroundImage: AssetImage(''),
                 ),
                 SizedBox(width: 10,),
                 CircleAvatar(
-                  backgroundImage: AssetImage('assets/facebook.png'),
+                  backgroundImage: AssetImage(''),
                 ),
                 SizedBox(width: 10,),
                 CircleAvatar(
-                  backgroundImage: AssetImage('assets/apple-logo.png'),
+                  backgroundImage: AssetImage(''),
                 ),SizedBox(width: 10,),
 
               ],
@@ -78,12 +73,12 @@ mainAxisAlignment: MainAxisAlignment.start,
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text("Already have an account? "),
-                GestureDetector(
+                Text("Already have an account? "),
+                InkWell(
                   onTap: () {
                     //   Get.to(LoginView());
                   },
-                  child: const Text(
+                  child:  Text(
                     "Sign in",
                     style: TextStyle(
                       color: Colors.green,

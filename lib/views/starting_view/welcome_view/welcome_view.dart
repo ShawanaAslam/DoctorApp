@@ -37,6 +37,7 @@ SizedBox(height: 20,),
             SizedBox(height: 20),
             InkWell(
               onTap: () {
+                Get.toNamed('/LoginView');
                 setState(() {
                   isLoginSelected = true;
                 });

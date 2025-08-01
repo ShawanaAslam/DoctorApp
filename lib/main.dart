@@ -6,6 +6,7 @@ import 'package:doctorapp/views/auth_view/verificationview/verificationView.dart
 import 'package:doctorapp/views/home_view/AddCardView/addCardView.dart';
 import 'package:doctorapp/views/home_view/AllAppointmentView/allAppointmentView.dart';
 import 'package:doctorapp/views/home_view/AppointmentView/appointmentView.dart';
+import 'package:doctorapp/views/home_view/BottomNavigationBar/BottomNavigationBar.dart';
 //import 'package:doctorapp/views/home_view/Appointment%20View/appointmentView.dart';
 import 'package:doctorapp/views/home_view/CancelAppointment/cancelAppointment.dart';
 //import 'package:doctorapp/views/home_view/DoctorFilterView/loadingView.dart';
@@ -70,10 +71,12 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
 
-initialRoute: '/splash',
-     getPages: AppRoutes.routes,
+// initialRoute: '/splash',
+//      getPages: AppRoutes.routes,
 
-     // home:
+
+        home:
+        BottomNavView()
        // DoctorDetailView()
        // LoginView()
         //LoadingView()

@@ -1,4 +1,5 @@
 
+import 'package:doctorapp/controller/constants/images.dart';
 import 'package:doctorapp/controller/widgets/button_widget.dart';
 import 'package:doctorapp/controller/widgets/mytextformfield.dart';
 import 'package:doctorapp/controller/widgets/text_widget.dart';
@@ -7,20 +8,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-class SignupView extends StatefulWidget {
+class SignupView extends StatelessWidget {
   const SignupView({super.key});
 
-  @override
-  State<SignupView> createState() => _SignupViewState();
-}
-
-class _SignupViewState extends State<SignupView> {
   @override
   Widget build(BuildContext context) {
     TextEditingController controller=TextEditingController();
     return
       Scaffold(
-      
+
         appBar: AppBar(
           title: TextWidget(txt: 'Sign Up',clr: Colors.black,),
           centerTitle: true,
@@ -49,7 +45,7 @@ class _SignupViewState extends State<SignupView> {
                       CircleAvatar(
                         radius: 40,
                         backgroundImage:
-                        AssetImage('assets/profile.jpg'),
+                        AssetImage(MyImages.man),
                       ),
 
                       // Edit Icon
@@ -123,15 +119,15 @@ class _SignupViewState extends State<SignupView> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CircleAvatar(
-                      backgroundImage: AssetImage('assets/google.png'),
+                      backgroundImage: AssetImage(''),
                     ),
                     SizedBox(width: 10,),
                     CircleAvatar(
-                      backgroundImage: AssetImage('assets/facebook.png'),
+                      backgroundImage: AssetImage(''),
                     ),
                     SizedBox(width: 10,),
                     CircleAvatar(
-                      backgroundImage: AssetImage('assets/apple-logo.png'),
+                      backgroundImage: AssetImage(''),
                     ),SizedBox(width: 10,),
 
                   ],
@@ -141,7 +137,7 @@ class _SignupViewState extends State<SignupView> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text("Already have an account? "),
-                    GestureDetector(
+                    InkWell(
                       onTap: () {
                      // Get.to(LoginView());
                       },
@@ -159,7 +155,7 @@ class _SignupViewState extends State<SignupView> {
             ),
           ),
         ),
-      
+
 
     );
   }

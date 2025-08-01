@@ -2,19 +2,21 @@
 
 
 
+import 'package:doctorapp/views/auth_view/signUp_view/signup_view.dart';
+import 'package:doctorapp/views/auth_view/signUp_view/signupsec.dart';
 import 'package:flutter/material.dart';
 
-import 'onboardingWidget/onboarding_widget.dart';
 
 
-class OnboardingView extends StatefulWidget {
-  const OnboardingView({super.key});
+
+class SignUpScroll extends StatefulWidget {
+  const SignUpScroll({super.key});
 
   @override
-  State<OnboardingView> createState() => _OnboardingViewState();
+  State<SignUpScroll> createState() => _SignUpScrollState();
 }
 
-class _OnboardingViewState extends State<OnboardingView> {
+class _SignUpScrollState extends State<SignUpScroll> {
 
   final PageController pageController=PageController();
   int Currentpage=0;
@@ -48,19 +50,8 @@ class _OnboardingViewState extends State<OnboardingView> {
                 });
               },
               children: [
-                onboarding_widget(text: 'Talk to a Doctor',
-                  icon:'assets/salad.png',
-                  text1: 'connects patients with doctors who\n'
-                      '  share their language and ethnicity',),
-                onboarding_widget(text: 'Call an ambulance'
-                    , icon:'',//MyImages.salad,
-                    text1: ' request for an ambulance 34/7\n'
-                        '         through MyDoctor app'),
-
-                onboarding_widget(text:'Schedule an appointment'
-                    , icon:'',//MyImages.fruits,
-                    text1: '       schedule an appointment with \n'
-                        '   a certified doctor on MyDoctor app'),
+                SignupView(),
+                Signupsec()
 
 
               ],
