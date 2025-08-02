@@ -9,6 +9,7 @@ import 'package:doctorapp/views/home_view/AppointmentView/appointmentView.dart';
 import 'package:doctorapp/views/home_view/BottomNavigationBar/BottomNavigationBar.dart';
 //import 'package:doctorapp/views/home_view/Appointment%20View/appointmentView.dart';
 import 'package:doctorapp/views/home_view/CancelAppointment/cancelAppointment.dart';
+import 'package:doctorapp/views/home_view/ChatView/chatOuterView.dart';
 //import 'package:doctorapp/views/home_view/DoctorFilterView/loadingView.dart';
 import 'package:doctorapp/views/home_view/FavoriteView/favoriteView.dart';
 import 'package:doctorapp/views/home_view/LoadingView/loadingView.dart';
@@ -18,7 +19,7 @@ import 'package:doctorapp/views/home_view/ReviewSummrayView/reviewSummaryView.da
 import 'package:doctorapp/views/home_view/SearchResultView/searchResultView.dart';
 //import 'package:doctorapp/views/home_view/PaymentOptionsView/paymentOptionsView.dart';
 import 'package:doctorapp/views/home_view/callView.dart';
-import 'package:doctorapp/views/home_view/chatView.dart';
+import 'package:doctorapp/views/home_view/ChatView/chatView.dart';
 import 'package:doctorapp/views/home_view/DoctorsView/docotrsView.dart';
 import 'package:doctorapp/views/home_view/DoctorDetailView/doctorDetailView.dart';
 import 'package:doctorapp/views/home_view/filterView/filterView.dart';
@@ -98,6 +99,8 @@ class MyApp extends StatelessWidget {
       //ProfileView()
         //ProfileViewTwo()
         //NotificationView()
+      //ChatOuterView()
+     // WhatsAppCloneView()
         //ChatView()
         //CallView()
        // NewAppointmentview()

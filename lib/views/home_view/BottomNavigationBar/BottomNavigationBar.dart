@@ -1,4 +1,5 @@
 
+import 'package:doctorapp/views/home_view/ChatView/chatOuterView.dart';
 import 'package:doctorapp/views/home_view/DashBoardView/dashBoardView.dart';
 import 'package:flutter/material.dart';
 
@@ -16,8 +17,8 @@ class _BottomNavViewState extends State<BottomNavView> {
 
   final List<Widget> _screens = [
     DashBoardView(),
-   // Center(child: Text('Home Screen')),
-    Center(child: Text('Messages Screen')),
+   ChatOuterView(),
+
     Center(child: Text('Call')),
     Center(child: Text('Booking Screen')),
    ProfileView()
