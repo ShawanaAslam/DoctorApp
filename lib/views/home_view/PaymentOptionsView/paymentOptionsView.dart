@@ -1,6 +1,10 @@
 
 import 'package:doctorapp/controller/widgets/profileFormFieldWidget.dart';
+import 'package:doctorapp/views/home_view/AddCardView/addCardView.dart';
+import 'package:doctorapp/views/home_view/PaymentOptionsView/PaymentOptionsWidget/paymentFormField.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../../controller/widgets/text_widget.dart';
 
@@ -19,7 +23,9 @@ class _PaymentOptionsViewState extends State<PaymentOptionsView> {
         title: TextWidget(txt: 'Payment Options',
           clr: Colors.black,fntwt: FontWeight.w500,),
         centerTitle: true,
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: (){
+          Get.back();
+        }, icon: Icon(Icons.arrow_back)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -33,8 +39,12 @@ class _PaymentOptionsViewState extends State<PaymentOptionsView> {
                 ],
               ),
               SizedBox(height: 10,),
-              ProfileFormfieldwidget(txt: 'Add New Card',icn1: Icons.card_membership_sharp,
-                  txt1: 'Add',),
+
+              PaymentFieldWidget(txt: 'Add New Card',
+                txt1: 'Add',onTap: (){
+                Get.to(()=>AddCardView());
+                },
+                icn:  Icons.card_membership_sharp,),
               SizedBox(height: 20,),
               Row(
                 children: [
@@ -43,8 +53,12 @@ class _PaymentOptionsViewState extends State<PaymentOptionsView> {
                 ],
               ),
               SizedBox(height: 15,),
-              ProfileFormfieldwidget(txt: 'Bitcoin Payment',icn1: Icons.currency_bitcoin,
-                txt1: 'Add',),
+              PaymentFieldWidget(txt: 'Bitcoin Payment',
+                txt1: 'Add',onTap: (){
+                  Get.to(()=>AddCardView());
+                },
+                icn:  Icons.card_membership_sharp,),
+
               SizedBox(height: 15,),
               Row(
                 children: [
@@ -54,11 +68,19 @@ class _PaymentOptionsViewState extends State<PaymentOptionsView> {
               ),
           
               SizedBox(height: 15,),
-              ProfileFormfieldwidget(txt: 'Payal',icn1: Icons.payment,
-                txt1: 'Add',),
+              PaymentFieldWidget(txt: 'Payal',
+                txt1: 'Add',onTap: (){
+                  Get.to(()=>AddCardView());
+                },
+                icn:  Icons.card_membership_sharp,),
+
               SizedBox(height: 15,),
-              ProfileFormfieldwidget(txt: 'Apple Pay',icn1: Icons.payment_outlined,
-                txt1: 'Add',),
+              PaymentFieldWidget(txt: 'Apple Pay',
+                txt1: 'Add',onTap: (){
+                  Get.to(()=>AddCardView());
+                },
+                icn:  Icons.card_membership_sharp,),
+
             ],
           ),
         ),

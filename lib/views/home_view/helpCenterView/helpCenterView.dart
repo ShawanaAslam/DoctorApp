@@ -18,7 +18,7 @@ class HelpCenterView extends StatefulWidget {
 class _HelpCenterViewState extends State<HelpCenterView>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
-
+  bool isOpen=false;
   @override
   void initState() {
     super.initState();
@@ -137,7 +137,25 @@ class _HelpCenterViewState extends State<HelpCenterView>
                           ),
                         ),
                         SizedBox(height: 10),
-                        HelpCenterField(),
+                       ExpansionTile(
+                         //  leading: Icon(Icons.),
+                           title: Text(''),
+                       onExpansionChanged: (value){
+                             isOpen=value;
+                             setState(() {
+
+                             });
+
+                       },
+                         trailing: isOpen?Icon(Icons.keyboard_arrow_down_outlined):
+                         Icon(Icons.keyboard_arrow_up),
+                         children: [
+                           Text('Data'),
+                           Text('Data'),
+                         ],
+                       ),
+
+                       // HelpCenterField(),
                         SizedBox(height: 5),
                         ProfileFormfieldwidget(
                           icn: Icons.keyboard_arrow_down_outlined,

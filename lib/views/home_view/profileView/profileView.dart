@@ -1,7 +1,7 @@
 
 import 'package:doctorapp/controller/widgets/profileRow.dart';
 import 'package:doctorapp/controller/widgets/text_widget.dart';
-import 'package:doctorapp/views/home_view/PaymentOptinsView/paymentOptionsView.dart';
+//import 'package:doctorapp/views/home_view/PaymentOptinsView/paymentOptionsView.dart';
 import 'package:doctorapp/views/home_view/PaymentView/paymentView.dart';
 import 'package:doctorapp/views/home_view/helpCenterView/helpCenterView.dart';
 import 'package:doctorapp/views/home_view/paswordManagerView/paswordManagerView.dart';
@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import '../PaymentOptionsView/paymentOptionsView.dart';
 import '../settingView/settingView.dart';
 
 class ProfileView extends StatefulWidget {

@@ -13,7 +13,7 @@ import 'package:doctorapp/views/home_view/ChatView/chatOuterView.dart';
 //import 'package:doctorapp/views/home_view/DoctorFilterView/loadingView.dart';
 import 'package:doctorapp/views/home_view/FavoriteView/favoriteView.dart';
 import 'package:doctorapp/views/home_view/LoadingView/loadingView.dart';
-import 'package:doctorapp/views/home_view/PaymentOptinsView/paymentOptionsView.dart';
+//import 'package:doctorapp/views/home_view/PaymentOptinsView/paymentOptionsView.dart';
 import 'package:doctorapp/views/home_view/PaymentView/paymentView.dart';
 import 'package:doctorapp/views/home_view/ReviewSummrayView/reviewSummaryView.dart';
 import 'package:doctorapp/views/home_view/SearchResultView/searchResultView.dart';
@@ -77,8 +77,9 @@ class MyApp extends StatelessWidget {
 
 
         home:
+        HelpCenterView()
        //SetPasword()
-       BottomNavView()
+      // BottomNavView()
        // DoctorDetailView()
        // LoginView()
         //LoadingView()

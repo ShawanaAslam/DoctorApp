@@ -1,6 +1,8 @@
 
 import 'package:doctorapp/controller/widgets/rowWidget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../../controller/widgets/button_widget.dart';
 import '../../../controller/widgets/profileFormFieldWidget.dart';
@@ -22,7 +24,9 @@ class _AddCardViewState extends State<AddCardView> {
         title: TextWidget(txt: 'Add Card',
           clr: Colors.black,fntwt: FontWeight.w500,),
         centerTitle: true,
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: (){
+          Get.back();
+        }, icon: Icon(Icons.arrow_back)),
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 20,right: 20),
