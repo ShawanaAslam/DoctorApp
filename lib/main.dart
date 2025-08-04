@@ -1,6 +1,7 @@
 import 'package:doctorapp/controller/routing/routing.dart';
 import 'package:doctorapp/views/auth_view/login_view/loginView.dart';
 import 'package:doctorapp/views/auth_view/setpasword/setPasword.dart';
+import 'package:doctorapp/views/auth_view/signUp_view/signUpScroll.dart';
 import 'package:doctorapp/views/auth_view/signUp_view/signup_view.dart';
 import 'package:doctorapp/views/auth_view/verificationview/verificationView.dart';
 import 'package:doctorapp/views/home_view/AddCardView/addCardView.dart';
@@ -112,6 +113,7 @@ class MyApp extends StatelessWidget {
        // SignupView()
       //WelcomeView()
       //OnboardingScreen()
+        SignUpScroll()
       //SplashView()
       //const MyHomePage(title: 'Flutter Demo Home Page'),
     );
