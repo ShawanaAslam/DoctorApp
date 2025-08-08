@@ -8,6 +8,8 @@ import 'package:doctorapp/views/home_view/AddCardView/addCardView.dart';
 import 'package:doctorapp/views/home_view/AllAppointmentView/allAppointmentView.dart';
 import 'package:doctorapp/views/home_view/AppointmentView/appointmentView.dart';
 import 'package:doctorapp/views/home_view/BottomNavigationBar/BottomNavigationBar.dart';
+import 'package:doctorapp/views/home_view/CallView/callFrstView.dart';
+import 'package:doctorapp/views/home_view/CallView/callSecView.dart';
 //import 'package:doctorapp/views/home_view/Appointment%20View/appointmentView.dart';
 import 'package:doctorapp/views/home_view/CancelAppointment/cancelAppointment.dart';
 import 'package:doctorapp/views/home_view/ChatView/chatOuterView.dart';
@@ -19,14 +21,14 @@ import 'package:doctorapp/views/home_view/PaymentView/paymentView.dart';
 import 'package:doctorapp/views/home_view/ReviewSummrayView/reviewSummaryView.dart';
 import 'package:doctorapp/views/home_view/SearchResultView/searchResultView.dart';
 //import 'package:doctorapp/views/home_view/PaymentOptionsView/paymentOptionsView.dart';
-import 'package:doctorapp/views/home_view/callView.dart';
+import 'package:doctorapp/views/home_view/CallView/callView.dart';
 import 'package:doctorapp/views/home_view/ChatView/chatView.dart';
 import 'package:doctorapp/views/home_view/DoctorsView/docotrsView.dart';
 import 'package:doctorapp/views/home_view/DoctorDetailView/doctorDetailView.dart';
 import 'package:doctorapp/views/home_view/filterView/filterView.dart';
 import 'package:doctorapp/views/home_view/helpCenterView/helpCenterView.dart';
 import 'package:doctorapp/views/home_view/DashBoardView/dashBoardView.dart';
-import 'package:doctorapp/views/home_view/newAppointmentview.dart';
+import 'package:doctorapp/views/home_view/NewAppoimtmentView/newAppointmentview.dart';
 import 'package:doctorapp/views/home_view/notificationView/notificationView.dart';
 import 'package:doctorapp/views/home_view/paswordManagerView/paswordManagerView.dart';
 import 'package:doctorapp/views/home_view/privacyView/privacyView.dart';
@@ -78,21 +80,24 @@ class MyApp extends StatelessWidget {
 
 
         home:
-        HelpCenterView()
+        //CallSecView()
+        //CallFrstView()
+        //CallSecView(doctorName: '', doctorImage: '', phoneNumber: '',)
+      // HelpCenterView()
        //SetPasword()
-      // BottomNavView()
-       // DoctorDetailView()
+      //BottomNavView()
+        //DoctorDetailView()
        // LoginView()
         //LoadingView()
         //SearchResultView()
        // PaymentView()
         //ReviewSummaryView()
-         // AddCardView()
+         //AddCardView()
         //PaymentOptionsView()
         //FavoriteView()
         //AllAppointmentView()
        //AppointmentView()
-       // CancelAppointmentView()
+       //CancelAppointmentView()
         //FilterView()
        // PaswordManagerView()
         //SettingView()
@@ -101,20 +106,20 @@ class MyApp extends StatelessWidget {
       //ProfileView()
         //ProfileViewTwo()
         //NotificationView()
-      //ChatOuterView()
+     // ChatOuterView()
      // WhatsAppCloneView()
-        //ChatView()
-        //CallView()
+      //  ChatView(userName: '', message: '',)
+       // CallView()
        // NewAppointmentview()
-       // DoctorsView()
+       //DoctorsView()
         //DashBoardView()
       //  SetPasword()
-       // Verificationview()
-       // SignupView()
+     //   Verificationview()
+        //SignupView()
       //WelcomeView()
-      //OnboardingScreen()
-        SignUpScroll()
-      //SplashView()
+      //OnboardingView()
+      // SignUpScroll()
+      SplashView()
       //const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

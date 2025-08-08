@@ -1,8 +1,10 @@
 
+import 'package:doctorapp/views/home_view/CallView/callFrstView.dart';
 import 'package:doctorapp/views/home_view/ChatView/chatOuterView.dart';
 import 'package:doctorapp/views/home_view/DashBoardView/dashBoardView.dart';
 import 'package:flutter/material.dart';
 
+import '../../../controller/constants/colors.dart';
 import '../profileView/profileView.dart';
 
 class BottomNavView extends StatefulWidget {
@@ -13,27 +15,29 @@ class BottomNavView extends StatefulWidget {
 }
 
 class _BottomNavViewState extends State<BottomNavView> {
-  int _selectedIndex = 2; // Booking tab selected by default
+  int _selectedIndex = 0; // Booking tab selected by default
 
   final List<Widget> _screens = [
     DashBoardView(),
    ChatOuterView(),
+     CallFrstView(),
 
-    Center(child: Text('Call')),
     Center(child: Text('Booking Screen')),
    ProfileView()
   ];
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
+      backgroundColor: AppColors.whiteClr,
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
         elevation: 10,
-        selectedItemColor: Colors.green,
+        selectedItemColor: AppColors.greenColor,
         unselectedItemColor: Colors.grey,
         showSelectedLabels: true,
         showUnselectedLabels: true,
@@ -74,12 +78,12 @@ class _BottomNavViewState extends State<BottomNavView> {
       //   child:
         Icon(
           icon,
-          color: isSelected ? Colors.green : Colors.grey,size: 50,
+          color: isSelected ? AppColors.greenColor : Colors.grey,size: 50,
         )
      // )
           : Icon(
         icon,
-        color: isSelected ? Colors.green : Colors.grey,
+        color: isSelected ? AppColors.greenColor : Colors.grey,
       ),
     );
   }

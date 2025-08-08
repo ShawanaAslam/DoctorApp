@@ -2,6 +2,7 @@
 
 
 
+import 'package:doctorapp/controller/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 import 'onboardingWidget/onboarding_widget.dart';
@@ -22,6 +23,7 @@ class _OnboardingViewState extends State<OnboardingView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteClr,
       body: OrientationBuilder(
         builder: (context,orentation){
           return GestureDetector(

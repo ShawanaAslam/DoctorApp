@@ -1,4 +1,5 @@
 
+import 'package:doctorapp/controller/constants/colors.dart';
 import 'package:doctorapp/controller/constants/images.dart';
 import 'package:doctorapp/controller/widgets/button_widget.dart';
 import 'package:doctorapp/controller/widgets/mytextformfield.dart';
@@ -16,19 +17,22 @@ class SignupView extends StatelessWidget {
     TextEditingController controller=TextEditingController();
     return
       Scaffold(
-
-        appBar: AppBar(
-          title: TextWidget(txt: 'Sign Up',clr: Colors.black,),
-          centerTitle: true,
-          leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios)),
-        ),
+backgroundColor: AppColors.whiteClr,
+        // appBar: AppBar(
+        //
+        //   leading: IconButton(onPressed: (){
+        //     Get.back();
+        //   }, icon: Icon(Icons.arrow_back)),
+        // ),
         body: Padding(
-          padding: EdgeInsets.only(left: 20,right: 20),
+          padding: EdgeInsets.only(left: 20,right: 20,),
           child: SingleChildScrollView(
             child: Column(
+
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+
                 TextWidget(txt: 'Complete your Profile',clr: Colors.black,),
                  TextWidget(txt: "Don't worry only you can see your personal info\n"
                      "no one else will be able to see it.",clr: Colors.grey,fntsze: 12
@@ -45,7 +49,7 @@ class SignupView extends StatelessWidget {
                       CircleAvatar(
                         radius: 40,
                         backgroundImage:
-                        AssetImage(MyImages.man),
+                        AssetImage(AppImages.man),
                       ),
 
                       // Edit Icon
@@ -55,7 +59,7 @@ class SignupView extends StatelessWidget {
                         child: Container(
                           padding: EdgeInsets.all(6),
                           decoration: BoxDecoration(
-                            color: Colors.green,
+                            color: AppColors.greenColor,
                             shape: BoxShape.circle,
                           ),
                           child: Icon(
@@ -86,16 +90,16 @@ class SignupView extends StatelessWidget {
                     TextWidget(txt: 'By tapping "next" , you agree to our',
                       clr: Colors.black,fntsze: 14,),
                     SizedBox(width: 5,),
-                    TextWidget(txt: 'terms',clr: Colors.green,fntsze: 14),
+                    TextWidget(txt: 'terms',clr: AppColors.greenColor,fntsze: 14),
                   ],
                 ),
                 Row(
                   children: [
-                    TextWidget(txt: 'Conditions',clr: Colors.green,fntsze: 14),
+                    TextWidget(txt: 'Conditions',clr:AppColors.greenColor,fntsze: 14),
                     SizedBox(width: 5,),
                     TextWidget(txt: 'and',clr: Colors.black,fntsze: 14),
                     SizedBox(width: 5,),
-                    TextWidget(txt: 'Privacy policy',clr: Colors.green,fntsze: 14),
+                    TextWidget(txt: 'Privacy policy',clr: AppColors.greenColor,fntsze: 14),
                   ],
                 ),
                 SizedBox(height: 15,),
@@ -103,7 +107,7 @@ class SignupView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ButtonWidget(txt: 'Next', ontp: (){
-                      Get.to(Signupsec());
+                     // Get.to(Signupsec());
                     }),
                   ],
                 ),
@@ -144,7 +148,7 @@ class SignupView extends StatelessWidget {
                       child: const Text(
                         "Sign in",
                         style: TextStyle(
-                          color: Colors.green,
+                          color: AppColors.greenColor,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

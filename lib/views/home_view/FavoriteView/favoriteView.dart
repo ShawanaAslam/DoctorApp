@@ -80,7 +80,7 @@ import 'package:doctorapp/views/home_view/AllAppointmentView/AllAppointmentWidge
 import 'package:doctorapp/views/home_view/AllAppointmentView/AllAppointmentWidgets/containerWidget.dart';
 import 'package:flutter/material.dart';
 
-import '../../../controller/widgets/helCenterField.dart';
+import '../helpCenterView/HelpCenterWidget/helpExpansionWidget.dart';
 import '../../../controller/widgets/profileFormFieldWidget.dart';
 import '../../../controller/widgets/text_widget.dart';
 import 'FavoriteViewWidget/doctorTabWidget.dart';

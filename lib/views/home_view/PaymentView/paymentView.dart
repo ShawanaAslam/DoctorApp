@@ -1,6 +1,7 @@
 
 
 import 'package:doctorapp/controller/widgets/button_widget.dart';
+import 'package:doctorapp/views/home_view/AppointmentView/appointmentView.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -127,6 +128,7 @@ SizedBox(height: 20,),
                             selectedIndex: selectedIndex,
                             text: 'View Appointment',
                             onTap: () {
+                              Get.to(()=>AppointmentView());
                               setState(() {
                                 selectedIndex = 0;
                               });

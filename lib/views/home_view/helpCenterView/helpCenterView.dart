@@ -1,10 +1,11 @@
 
 import 'package:doctorapp/controller/widgets/selectedButton.dart';
+import 'package:doctorapp/views/home_view/helpCenterView/HelpCenterWidget/espentionTileWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-import '../../../controller/widgets/helCenterField.dart';
+import 'HelpCenterWidget/helpExpansionWidget.dart';
 import '../../../controller/widgets/profileFormFieldWidget.dart';
 import '../../../controller/widgets/text_widget.dart';
 
@@ -136,51 +137,26 @@ class _HelpCenterViewState extends State<HelpCenterView>
                             ],
                           ),
                         ),
-                        SizedBox(height: 10),
-                       ExpansionTile(
-                         //  leading: Icon(Icons.),
-                           title: Text(''),
-                       onExpansionChanged: (value){
-                             isOpen=value;
-                             setState(() {
 
-                             });
 
-                       },
-                         trailing: isOpen?Icon(Icons.keyboard_arrow_down_outlined):
-                         Icon(Icons.keyboard_arrow_up),
-                         children: [
-                           Text('Data'),
-                           Text('Data'),
-                         ],
-                       ),
+                       HelpExpansionWidget(txt: "How can I schedule an appointment?",
+                         txt1:  "Scheduling an appointment on a telemedicine app typically involves a user-friendly and intuitive process",),
 
-                       // HelpCenterField(),
-                        SizedBox(height: 5),
-                        ProfileFormfieldwidget(
-                          icn: Icons.keyboard_arrow_down_outlined,
-                          txt: 'How can I schedule an appointment?',
-                        ),
-                        SizedBox(height: 5),
-                        ProfileFormfieldwidget(
-                          icn: Icons.keyboard_arrow_down_outlined,
-                          txt: 'How can I schedule an appointment?',
-                        ),
-                        SizedBox(height: 5),
-                        ProfileFormfieldwidget(
-                          icn: Icons.keyboard_arrow_down_outlined,
-                          txt: 'How can I schedule an appointment?',
-                        ),
-                        SizedBox(height: 5),
-                        ProfileFormfieldwidget(
-                          icn: Icons.keyboard_arrow_down_outlined,
-                          txt: 'How can I schedule an appointment?',
-                        ),
-                        SizedBox(height: 5),
-                        ProfileFormfieldwidget(
-                          icn: Icons.keyboard_arrow_down_outlined,
-                          txt: 'How can I schedule an appointment?',
-                        ),
+                        ExpansionTileWidget(txt:'How can I schedule an appointment?'
+                          ,txt1:'Data1' ,txt2:'Data2' ,),
+
+
+                        ExpansionTileWidget(txt:'How can I schedule an appointment?'
+                          ,txt1:'Data1' ,txt2:'Data2' ,),
+
+                        ExpansionTileWidget(txt:'How can I schedule an appointment?'
+                          ,txt1:'Data1' ,txt2:'Data2' ,),
+
+                        ExpansionTileWidget(txt:'How can I schedule an appointment?'
+                          ,txt1:'Data1' ,txt2:'Data2' ,),
+
+                        ExpansionTileWidget(txt:'How can I schedule an appointment?'
+                          ,txt1:'Data1' ,txt2:'Data2' ,),
                       ],
                     ),
                   ),
@@ -245,89 +221,34 @@ class _HelpCenterViewState extends State<HelpCenterView>
                           ),
                     
                         ),
-                        ProfileFormfieldwidget(
-                          icn1:  Icons.mic_none_rounded,
-                          icn: Icons.keyboard_arrow_down_outlined,
-                          txt: 'Customize Services',
-                        ),
-                    SizedBox(height: 10,),
-                            Container(
-                              height: 100,
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(
-                                    color: Colors.grey
-                                  )
-                              ),
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 15,right: 15),
-                                    child: TextFormField(
-                    
-                    decoration:InputDecoration(
-                      border: InputBorder.none,
-                      hintText: 'Whatsapp',
-                      suffixIcon: Icon(Icons.keyboard_arrow_up_outlined,
-                          color: Colors.green,size: 25),
-                      prefixIcon: Icon(Icons.phone_callback,
-                    
-                        color: Colors.green,size: 20,),
-                    
-                    ) ,
-                                    ),
-                                  ),
-                                  Divider(
-                                    indent: 20,      // Start se 50 pixels ka space
-                                    endIndent: 20,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 15,right: 15),
-                                    child: Container(
-                    child: Row(
-                      children: [
-                        Icon(Icons.star_border_purple500_rounded, color: Colors.green,size: 16),
-                        SizedBox(width: 10,),
-                        Text('0810 666 6666',
-                          style: TextStyle(fontSize: 16, color: Colors.grey),),
-                      ],
-                    ),
-                                    ),
-                    
-                                  ),
-                                ],
-                              ),
-                            ),
-                        SizedBox(height: 10,),
-                    
-                        ProfileFormfieldwidget(
-                          icn1:  Icons.webhook_sharp,
-                          icn: Icons.keyboard_arrow_down_outlined,
-                          txt: 'Website',
-                        ),
-                        SizedBox(height: 10,),
-                    
-                        ProfileFormfieldwidget(
-                          icn1:  Icons.facebook_outlined,
-                          icn: Icons.keyboard_arrow_down_outlined,
-                          txt: 'facebook',
-                        ),
-                        SizedBox(height: 10,),
-                    
-                        ProfileFormfieldwidget(
-                          icn1:  Icons.transfer_within_a_station,
-                          icn: Icons.keyboard_arrow_down_outlined,
-                          txt: 'twitter',
-                        ),
-                    
-                        SizedBox(height: 10,),
-                    
-                        ProfileFormfieldwidget(
-                          icn1:  Icons.insert_comment_outlined,
-                          icn: Icons.keyboard_arrow_down_outlined,
-                          txt: 'instagram',
-                        ),
+                        ExpansionTileWidget(
+                          leadingIcon: Icons.mic_none_rounded,
+                          txt:'Customize Services'
+                          ,txt1:'Data1' ,txt2:'Data2' ,),
+                        HelpExpansionWidget(
+                        titleIcon: Icons.phone_callback,
+                               contentIcon:
+                               Icons.star_border_purple500_rounded
+                               ,txt: "WhatsApp",
+                          txt1:  "0810 666 6666",),
+
+                        ExpansionTileWidget(
+                          leadingIcon:  Icons.webhook_sharp,
+                          txt:'website'
+                          ,txt1:'Data1' ,txt2:'Data2' ,),
+                        ExpansionTileWidget(
+                          leadingIcon:  Icons.facebook_outlined,
+                          txt:'facebook'
+                          ,txt1:'Data1' ,txt2:'Data2' ,),
+                        ExpansionTileWidget(
+                          leadingIcon:  Icons.transfer_within_a_station,
+                          txt:'twitter'
+                          ,txt1:'Data1' ,txt2:'Data2' ,),
+                        ExpansionTileWidget(
+                          leadingIcon:Icons.insert_comment_outlined,
+                          txt:'instagram'
+                          ,txt1:'Data1' ,txt2:'Data2' ,),
+
                       ],
                     ),
                   ),

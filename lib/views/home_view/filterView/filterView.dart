@@ -2,6 +2,8 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../../controller/widgets/selectedButton.dart';
 import '../../../controller/widgets/text_widget.dart';
@@ -43,7 +45,9 @@ class _FilterViewState extends State<FilterView> {
       appBar: AppBar(
         title: TextWidget(txt: 'Search Filter',clr: Colors.black,fntwt: FontWeight.w500,),
         centerTitle: true,
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: (){
+          Get.back();
+        }, icon: Icon(Icons.arrow_back)),
       ),
       body: Padding(
         padding:  EdgeInsets.only(left: 15,right: 15),

@@ -1,4 +1,5 @@
 
+import 'package:doctorapp/controller/constants/colors.dart';
 import 'package:doctorapp/controller/widgets/button_widget.dart';
 import 'package:doctorapp/controller/widgets/profileFormFieldWidget.dart';
 import 'package:doctorapp/views/home_view/DashBoardView/dashBoardView.dart';
@@ -8,6 +9,7 @@ import 'package:get/get_core/src/get_main.dart';
 
 import '../../../controller/widgets/paswordFormField.dart';
 import '../../../controller/widgets/text_widget.dart';
+import '../../home_view/BottomNavigationBar/BottomNavigationBar.dart';
 import 'LoginWidget/fingerPrintWidget.dart';
 
 class LoginView extends StatefulWidget {
@@ -28,9 +30,12 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteClr,
       appBar: AppBar(
 
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios)),
+        leading: IconButton(onPressed: (){
+          Get.back();
+        }, icon: Icon(Icons.arrow_back)),
       ),
       body: SingleChildScrollView(
         child: SingleChildScrollView(
@@ -73,7 +78,7 @@ class _LoginViewState extends State<LoginView> {
 
                 ButtonWidget(txt: 'Sign in', ontp: (){
 
-                  Get.to(DashBoardView());
+                  Get.to(BottomNavView());
                   if (_formKey.currentState!.validate()) {
                     // Validation passed
                     print("Password: ${passwordController.text}");

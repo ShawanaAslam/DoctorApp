@@ -91,7 +91,7 @@ class _DashConWidgetState extends State<DashConWidget> {
                   bottomRight: Radius.circular(20),
                 ),
                 child: Image.asset(
-                  MyImages.man, // 🟢 Update with your image path
+                  AppImages.man, // 🟢 Update with your image path
                   fit: BoxFit.cover,
                   height: 140,
                 ),

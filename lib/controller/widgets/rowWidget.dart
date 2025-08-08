@@ -8,13 +8,15 @@ class RowWidget extends StatelessWidget {
   Color? clr;
   Color? clr1;
   String txt1;
+  VoidCallback ? ontp;
  //IconData? icn,
    RowWidget({super.key,
     // this.icn,
      this.clr=Colors.grey,
      this.clr1=Colors.black,
    required this.txt,
-     required this.txt1
+     required this.txt1,
+     this.ontp
    });
 
   @override
@@ -30,8 +32,11 @@ class RowWidget extends StatelessWidget {
               ,fntsze: 14,fntwt: FontWeight.w500,),
           ],
         ),
-        TextWidget(txt:txt1,clr: clr1??Colors.black
-          ,fntsze: 14,fntwt: FontWeight.w500,),
+        InkWell(
+          onTap: ontp,
+          child: TextWidget(txt:txt1,clr: clr1??Colors.black
+            ,fntsze: 14,fntwt: FontWeight.w500,),
+        ),
       ],
     );
   }

@@ -1,7 +1,12 @@
 
+import 'package:doctorapp/controller/constants/colors.dart';
 import 'package:doctorapp/controller/widgets/selectedButton.dart';
 import 'package:doctorapp/controller/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+import '../DashBoardView/dashBoardView.dart';
 
 class CallView extends StatefulWidget {
    CallView({super.key});
@@ -18,7 +23,9 @@ class _CallViewState extends State<CallView> {
     return Scaffold(
 
       appBar: AppBar(
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios)),
+        leading: IconButton(onPressed: (){
+          Get.back();
+        }, icon: Icon(Icons.arrow_back)),
       ),
       body: Center(
 
@@ -29,13 +36,13 @@ class _CallViewState extends State<CallView> {
             children: [
               SizedBox(height: 10,),
               CircleAvatar(
-                backgroundColor: Colors.green,
+                backgroundColor: AppColors.greenColor,
                 radius: 45,
                 child: Icon(Icons.call,color: Colors.white,size: 45,),
               ),
               SizedBox(height: 30,),
           TextWidget(txt: 'The Consaltation Session has\n'
-              '                    ended',clr: Colors.black,
+              'ended',clr: Colors.black,
             fntsze: 20,fntwt: FontWeight.w600,),
               SizedBox(height: 10,),
               TextWidget(txt: 'Recording has been saved in record',
@@ -71,7 +78,7 @@ class _CallViewState extends State<CallView> {
                     hgt:55,
                     wdt: 160,ontap: (){
                     check=1;
-          
+                    Get.to(()=>DashBoardView());
                     setState(() {
           
                     });

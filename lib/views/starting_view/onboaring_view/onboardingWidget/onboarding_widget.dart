@@ -32,8 +32,8 @@ class onboarding_widget extends StatelessWidget {
 
             ButtonWidget(
                 ontp: (){
-
-                  Get.toNamed('/WelcomeView');
+Get.to(()=>WelcomeView());
+//                  Get.toNamed('/WelcomeView');
                 },
                 txt: 'Next')
 

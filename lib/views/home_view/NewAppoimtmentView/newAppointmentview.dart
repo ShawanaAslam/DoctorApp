@@ -2,10 +2,14 @@
 import 'package:doctorapp/controller/widgets/genderButton.dart';
 import 'package:doctorapp/controller/widgets/mytextformfield.dart';
 import 'package:doctorapp/controller/widgets/text_widget.dart';
+import 'package:doctorapp/views/home_view/PaymentView/paymentView.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
-import '../../controller/widgets/selectedButton.dart';
-import '../../controller/widgets/selectedButton2.dart';
+import '../../../controller/widgets/button_widget.dart';
+import '../../../controller/widgets/selectedButton.dart';
+import '../../../controller/widgets/selectedButton2.dart';
 
 class NewAppointmentview extends StatefulWidget {
   const NewAppointmentview({super.key});
@@ -32,9 +36,11 @@ class _NewAppointmentviewState extends State<NewAppointmentview> {
     return Scaffold(
       appBar: AppBar(
 
-        title:  TextWidget(txt: "Doctors", clr:  Colors.black),
+        title:  TextWidget(txt: "NewAppointment", clr:  Colors.black),
         centerTitle: true,
-       leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios_rounded)),
+       leading: IconButton(onPressed: (){
+         Get.back();
+       }, icon: Icon(Icons.arrow_back)),
       ),
       body: Padding(
         padding: const EdgeInsets.only(right: 10,left: 10),
@@ -218,8 +224,27 @@ class _NewAppointmentviewState extends State<NewAppointmentview> {
 
                 ],
               ),
-             // SizedBox(height: 5),
-           GenderButton(txt: '',txt1: '',),
+          GenderButton(txt: '',txt1: '',),
+              SizedBox(height: 5,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  SizedBox(width: 15,),
+                  InkWell(
+                    onTap: (){
+                      Get.to(()=>PaymentView());
+                    },
+                    child: Container(height: 40,
+                        width: 150,
+                        child: Center(child: TextWidget(txt: 'Payment'))
+                        ,decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                              color: Colors.green
+                        ),),
+                  ),
+                ],
+              ),
+
               SizedBox(height: 5),
               Row(
                 children: [

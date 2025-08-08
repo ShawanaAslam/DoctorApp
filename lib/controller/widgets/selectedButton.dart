@@ -4,6 +4,7 @@
 //import '../../linker/linker.dart';
 
 
+import 'package:doctorapp/controller/constants/colors.dart';
 import 'package:doctorapp/controller/widgets/text_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +42,7 @@ class SelectButton extends StatelessWidget {
            // width: 1.0
           //  color:  check==check2 ? clr: Colors.white,
           ),
-            color:   check==check2 ? Colors.green: Colors.white,
+            color:   check==check2 ? AppColors.greenColor: Colors.white,
             borderRadius: BorderRadius.circular(5)
         ),
         child: Column(

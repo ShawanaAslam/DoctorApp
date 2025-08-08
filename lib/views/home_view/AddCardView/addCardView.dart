@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import '../../../controller/constants/colors.dart';
 import '../../../controller/widgets/button_widget.dart';
 import '../../../controller/widgets/profileFormFieldWidget.dart';
 import '../../../controller/widgets/text_widget.dart';
@@ -20,6 +21,7 @@ class _AddCardViewState extends State<AddCardView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteClr,
       appBar: AppBar(
         title: TextWidget(txt: 'Add Card',
           clr: Colors.black,fntwt: FontWeight.w500,),
@@ -36,7 +38,7 @@ class _AddCardViewState extends State<AddCardView> {
               height: 160,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.green[300],
+                color: AppColors.greenColor,
                 borderRadius:
                 BorderRadius.circular(20),
                   border: Border.all(

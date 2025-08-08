@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class ProfileFormfieldwidget extends StatelessWidget {
   String txt;
   String? txt1;
+  VoidCallback? ontp;
  // String? txt2;
   IconData? icn;
 //VoidCallback ontp;
@@ -11,6 +12,7 @@ class ProfileFormfieldwidget extends StatelessWidget {
    ProfileFormfieldwidget({super.key,
   required this.txt,
      this.txt1,
+     this.ontp,
   //required this.ontp,
      //this.txt2
      this.icn,
@@ -22,6 +24,7 @@ class ProfileFormfieldwidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onTap: ontp,
       decoration: InputDecoration(
        // suffix: Text(''),
           filled: true,

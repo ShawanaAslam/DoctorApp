@@ -1,11 +1,13 @@
-
+//////
 import 'package:doctorapp/controller/widgets/button_widget.dart';
 import 'package:doctorapp/controller/widgets/paswordFormField.dart';
+import 'package:doctorapp/views/auth_view/login_view/loginView.dart';
 import 'package:doctorapp/views/home_view/DashBoardView/dashBoardView.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import '../../../controller/constants/colors.dart';
 import '../../../controller/widgets/text_widget.dart';
 
 class SetPasword extends StatefulWidget {
@@ -26,7 +28,9 @@ class _SetPaswordState extends State<SetPasword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteClr,
         appBar: AppBar(
+
 
     leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios)),
     ),
@@ -45,7 +49,7 @@ class _SetPaswordState extends State<SetPasword> {
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(width: 30,),
+          SizedBox(width: 30,),
             TextWidget(txt: 'Pasword',clr: Colors.black,
               fntwt: FontWeight.w500,),
 
@@ -71,7 +75,7 @@ class _SetPaswordState extends State<SetPasword> {
 
         ButtonWidget(txt: 'Create New Pasword', ontp: (){
 
-          Get.to(DashBoardView());
+          Get.to(LoginView());
       if (_formKey.currentState!.validate()) {
       // Validation passed
       print("Password: ${passwordController.text}");

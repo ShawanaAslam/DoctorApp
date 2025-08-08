@@ -3,6 +3,8 @@
 import 'package:doctorapp/controller/widgets/circleRowWidget.dart';
 import 'package:doctorapp/controller/widgets/rowWidget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../../controller/widgets/text_widget.dart';
 
@@ -20,7 +22,9 @@ class _AppointmentViewState extends State<AppointmentView> {
       appBar: AppBar(
         title: TextWidget(txt: 'My Appointment',clr: Colors.black,fntwt: FontWeight.w500,),
         centerTitle: true,
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: (){
+          Get.back();
+        }, icon: Icon(Icons.arrow_back)),
         actions: [
           Icon(Icons.search),
           SizedBox(width: 10,)

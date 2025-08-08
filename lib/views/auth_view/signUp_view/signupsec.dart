@@ -1,12 +1,15 @@
 
+import 'package:doctorapp/controller/constants/images.dart';
 import 'package:doctorapp/views/auth_view/verificationview/verificationView.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import '../../../controller/constants/colors.dart';
 import '../../../controller/widgets/button_widget.dart';
 import '../../../controller/widgets/mytextformfield.dart';
 import '../../../controller/widgets/text_widget.dart';
+import '../login_view/loginView.dart';
 
 class Signupsec extends StatelessWidget {
    Signupsec({super.key});
@@ -17,13 +20,9 @@ class Signupsec extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(
-        title: TextWidget(txt: 'Sign Up',clr: Colors.black,),
-        centerTitle: true,
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios)),
-      ),
+backgroundColor: AppColors.whiteClr,
       body: Padding(
-        padding: const EdgeInsets.only(right: 20,left: 20),
+        padding: const EdgeInsets.only(right: 20,left: 20,),
         child: Column(
 mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,15 +55,18 @@ mainAxisAlignment: MainAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  backgroundImage: AssetImage(''),
+                  backgroundColor: AppColors.whiteClr,
+                  backgroundImage: AssetImage(AppImages.google),
                 ),
                 SizedBox(width: 10,),
                 CircleAvatar(
-                  backgroundImage: AssetImage(''),
+
+                  backgroundImage: AssetImage(AppImages.facebook),
                 ),
                 SizedBox(width: 10,),
                 CircleAvatar(
-                  backgroundImage: AssetImage(''),
+                  backgroundColor: AppColors.whiteClr,
+                  backgroundImage: AssetImage(AppImages.google),
                 ),SizedBox(width: 10,),
 
               ],
@@ -76,12 +78,12 @@ mainAxisAlignment: MainAxisAlignment.start,
                 Text("Already have an account? "),
                 InkWell(
                   onTap: () {
-                    //   Get.to(LoginView());
+                    Get.to(LoginView());
                   },
                   child:  Text(
                     "Sign in",
                     style: TextStyle(
-                      color: Colors.green,
+                      color: AppColors.greenColor,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

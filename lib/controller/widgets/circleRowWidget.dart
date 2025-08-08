@@ -2,6 +2,8 @@
 import 'package:doctorapp/controller/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../constants/colors.dart';
+
 class CircleRowWidget extends StatelessWidget {
   String txt;
   String txt1;
@@ -28,7 +30,7 @@ class CircleRowWidget extends StatelessWidget {
                 Positioned(
                     bottom: 2,
                     right: 1,
-                    child:Icon(Icons.star,color: Colors.green,)
+                    child:Icon(Icons.star,color: AppColors.greenColor,)
                 ),
               ]),
           // SizedBox(width: 20,),

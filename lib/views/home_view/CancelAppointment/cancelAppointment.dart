@@ -1,4 +1,7 @@
+import 'package:doctorapp/controller/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../../controller/widgets/button_widget.dart';
 import '../../../controller/widgets/text_widget.dart';
@@ -27,7 +30,10 @@ class _CancelAppointmentViewState extends State<CancelAppointmentView> {
       appBar: AppBar(
         title: TextWidget(txt: 'Cancel Appointment',clr: Colors.black,fntwt: FontWeight.w500,),
         centerTitle: true,
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: (
+            ){
+          Get.back();
+        }, icon: Icon(Icons.arrow_back)),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -49,7 +55,7 @@ class _CancelAppointmentViewState extends State<CancelAppointmentView> {
                   Radio(
                     value: index,
                     groupValue: selecteOption,
-                    activeColor: Colors.green,
+                    activeColor: AppColors.greenColor,
                     onChanged: (value) {
                       setState(() {
                         selecteOption = value!;

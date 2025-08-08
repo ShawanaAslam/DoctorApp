@@ -2,12 +2,17 @@
 import 'package:doctorapp/controller/constants/images.dart';
 import 'package:doctorapp/controller/widgets/profileFormFieldWidget.dart';
 import 'package:doctorapp/controller/widgets/rowWidget.dart';
+import 'package:doctorapp/views/home_view/AllAppointmentView/allAppointmentView.dart';
 import 'package:doctorapp/views/home_view/DashBoardView/DashBoardWidgets/dashConWidget.dart';
+import 'package:doctorapp/views/home_view/DoctorsView/docotrsView.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../../controller/constants/colors.dart';
 import '../../../controller/widgets/text_widget.dart';
 import '../SearchResultView/SearchResulrWidget/searchResultTab.dart';
+import '../filterView/filterView.dart';
 import 'DashBoardWidgets/DashSelectedWidget.dart';
 
 class DashBoardView extends StatefulWidget {
@@ -72,7 +77,10 @@ class _DashBoardViewState extends State<DashBoardView> {
                 children: [
                   Expanded(
                     flex: 100,
-                    child: ProfileFormfieldwidget(txt: 'Search Doctor, Pharmacy.....',
+                    child:
+                    ProfileFormfieldwidget(ontp:(){
+                      Get.to(()=>DoctorsView());
+                    },txt: 'Search Doctor, Pharmacy.....',
                       icn1: Icons.search,),
                   ),
                   SizedBox(width: 6,),
@@ -87,13 +95,18 @@ class _DashBoardViewState extends State<DashBoardView> {
                       borderRadius: BorderRadius.circular(5)
                     ),
           
-                   child: Icon(Icons.link,color: Colors.white,),
+                   child: IconButton(icon:Icon(Icons.link)
+                     ,color: Colors.white,onPressed: (){
+                     Get.to(()=>FilterView());
+                     },),
                   ))
                 ],
               ),
               SizedBox(height: 5,),
               RowWidget(txt: 'Upcoming Shcedule', txt1: 'See all',
-                clr:Colors.black ,
+                clr:Colors.black ,ontp: (){
+                Get.to(()=>AllAppointmentView());
+                },
                 clr1: AppColors.greenColor,),
           DashConWidget(),
           
@@ -102,14 +115,16 @@ class _DashBoardViewState extends State<DashBoardView> {
                   DashSelectedWidget(
                     ontap: () {
                       check = 1;
-                      setState(() {});
+                      setState(() {
+                        Get.to(()=>DoctorsView());
+                      });
                     },
                     hgt: 50,
                     wdt: 60,
                     check: check,
                     icon: Icons.swap_calls,
                     check2: 1,
-                    text: 'All',
+                    text: 'Doctor',
           
                   ),
           SizedBox(width: 10,),

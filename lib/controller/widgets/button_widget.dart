@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../constants/colors.dart';
+
 class ButtonWidget extends StatelessWidget {
   String txt;
   VoidCallback ontp;
@@ -16,7 +18,7 @@ class ButtonWidget extends StatelessWidget {
           width: 300,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
-            color: Colors.green,
+            color: AppColors.greenColor,
           ),
 
           child: Center(child: Text(txt,style: TextStyle(fontWeight:
