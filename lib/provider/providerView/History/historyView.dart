@@ -269,7 +269,7 @@ class HistoryScreen extends StatelessWidget {
         children: [
           Container(
             decoration: BoxDecoration(
-              border: Border.all(color: AppColors.greenColor),
+              //border: Border.all(color: AppColors.greenColor),
             borderRadius: BorderRadius.circular(30),
 
           ),

@@ -85,7 +85,8 @@ class MyApp extends StatelessWidget {
 
 
         home:
-        HistoryScreen()
+        WalletPayoutScreen()
+       // HistoryScreen()
         //History()
             //SecProfile()
         //KycBeginsView()
