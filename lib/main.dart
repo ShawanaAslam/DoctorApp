@@ -1,4 +1,9 @@
 import 'package:doctorapp/controller/routing/routing.dart';
+import 'package:doctorapp/provider/providerView/History/historyView.dart';
+import 'package:doctorapp/provider/providerView/KycBegins/kycBeginsView.dart';
+import 'package:doctorapp/provider/providerView/profile/profile.dart';
+import 'package:doctorapp/provider/providerView/profile/secProfile.dart';
+
 import 'package:doctorapp/views/auth_view/login_view/loginView.dart';
 import 'package:doctorapp/views/auth_view/setpasword/setPasword.dart';
 import 'package:doctorapp/views/auth_view/signUp_view/signUpScroll.dart';
@@ -80,6 +85,11 @@ class MyApp extends StatelessWidget {
 
 
         home:
+        HistoryScreen()
+        //History()
+            //SecProfile()
+        //KycBeginsView()
+        //ProfessionalKycView()
         //CallSecView()
         //CallFrstView()
         //CallSecView(doctorName: '', doctorImage: '', phoneNumber: '',)
@@ -119,7 +129,7 @@ class MyApp extends StatelessWidget {
       //WelcomeView()
       //OnboardingView()
       // SignUpScroll()
-      SplashView()
+     // SplashView()
       //const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

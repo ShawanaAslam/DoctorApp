@@ -7,11 +7,13 @@ class ProfileFormfieldwidget extends StatelessWidget {
   VoidCallback? ontp;
  // String? txt2;
   IconData? icn;
+  Color? bckclr;
 //VoidCallback ontp;
   IconData? icn1;
    ProfileFormfieldwidget({super.key,
   required this.txt,
      this.txt1,
+     this.bckclr,
      this.ontp,
   //required this.ontp,
      //this.txt2
