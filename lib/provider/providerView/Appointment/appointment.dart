@@ -138,7 +138,7 @@ class _AppointmentState extends State<Appointment> {
                   // Buttons
                   GestureDetector(
                     onTap: () {
-                      Get.to(()=>ClientsView());
+                      Get.to(()=>ClientView());
                       setState(() {
                         selectedButton ='message';
                       });

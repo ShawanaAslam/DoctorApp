@@ -91,14 +91,14 @@ class MyApp extends StatelessWidget {
 
         home:
         //AvailabilityView()
-        //ClientsView()
+        ClientView()
         //Appointment()
         //WalletView()
        // HistoryScreen()
         //History()
             //SecProfile()
         //KycBeginsView()
-        ProfessionalKycView()
+       // ProfessionalKycView()
         //CallSecView()
         //CallFrstView()
         //CallSecView(doctorName: '', doctorImage: '', phoneNumber: '',)
