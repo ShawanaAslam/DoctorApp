@@ -3,7 +3,10 @@ import 'package:doctorapp/controller/widgets/button_widget.dart';
 import 'package:doctorapp/controller/widgets/mytextformfield.dart';
 import 'package:doctorapp/controller/widgets/profileFormFieldWidget.dart';
 import 'package:doctorapp/controller/widgets/text_widget.dart';
+import 'package:doctorapp/provider/providerView/KycBegins/kycBeginsView.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 class ProfessionalKycView extends StatefulWidget {
   const ProfessionalKycView({super.key});
 
@@ -83,7 +86,10 @@ class _ProfessionalKycViewState extends State<ProfessionalKycView> {
               ),
               ProfileFormfieldwidget(txt: ''),
               SizedBox(height: 50,),
-              ButtonWidget(txt: 'Done', ontp: (){})
+              ButtonWidget(txt: 'Done', ontp: (){
+
+                Get.to(()=>KycBeginsView());
+              })
           
             ],
           ),

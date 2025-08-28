@@ -38,7 +38,7 @@ class _AppointmentViewState extends State<AppointmentView> {
            CircleRowWidget(txt:  'Dr.Kenny Adeola', txt1: 'General Practitioner',
                txt2:  'Lageos, Nigiria', txt3: '52 Reviews'),
             SizedBox(height: 10,),
-Divider(),
+             Divider(),
             SizedBox(height: 10,),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,

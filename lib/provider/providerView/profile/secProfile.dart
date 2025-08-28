@@ -1,6 +1,10 @@
 import 'package:doctorapp/controller/widgets/text_widget.dart';
 import 'package:doctorapp/provider/providerView/profile/profileWidget/profileCard.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+import '../History/historyView.dart';
 
 class SecProfile extends StatefulWidget {
   const SecProfile({super.key});
@@ -69,7 +73,10 @@ class _SecProfileState extends State<SecProfile> {
         children: [
           Text(title, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
          // Icon(icn, color: Colors.black54, size: 18),
-          IconButton(onPressed: (){}, icon:Icon(icn, color: Colors.black54, size: 18), )
+          IconButton(onPressed: (
+              ){
+            Get.to(()=>HistoryView());
+          }, icon:Icon(icn, color: Colors.black54, size: 18), )
         ],
       ),
     );

@@ -142,12 +142,15 @@
 
 ////////////////////////
 import 'package:doctorapp/controller/constants/colors.dart';
+import 'package:doctorapp/provider/providerView/walletView/walletView.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../../controller/widgets/text_widget.dart';
 
-class HistoryScreen extends StatelessWidget {
-  const HistoryScreen({super.key});
+class HistoryView extends StatelessWidget {
+  const HistoryView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -239,6 +242,9 @@ class HistoryScreen extends StatelessWidget {
           TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.black),
         ),
          InkWell(
+           onTap: (){
+             Get.to(()=>WalletView());
+           },
            child: Text(
             "SEE ALL",
             style: TextStyle(

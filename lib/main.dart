@@ -1,8 +1,13 @@
 import 'package:doctorapp/controller/routing/routing.dart';
+import 'package:doctorapp/provider/providerView/Appointment/appointment.dart';
+import 'package:doctorapp/provider/providerView/AvailabilityView/availabilityView.dart';
 import 'package:doctorapp/provider/providerView/History/historyView.dart';
 import 'package:doctorapp/provider/providerView/KycBegins/kycBeginsView.dart';
+import 'package:doctorapp/provider/providerView/ProfessionalKyc/professionalKycView.dart';
+import 'package:doctorapp/provider/providerView/clientView/clientView.dart';
 import 'package:doctorapp/provider/providerView/profile/profile.dart';
 import 'package:doctorapp/provider/providerView/profile/secProfile.dart';
+import 'package:doctorapp/provider/providerView/walletView/walletView.dart';
 
 import 'package:doctorapp/views/auth_view/login_view/loginView.dart';
 import 'package:doctorapp/views/auth_view/setpasword/setPasword.dart';
@@ -85,12 +90,15 @@ class MyApp extends StatelessWidget {
 
 
         home:
-        WalletPayoutScreen()
+        //AvailabilityView()
+        //ClientsView()
+        //Appointment()
+        //WalletView()
        // HistoryScreen()
         //History()
             //SecProfile()
         //KycBeginsView()
-        //ProfessionalKycView()
+        ProfessionalKycView()
         //CallSecView()
         //CallFrstView()
         //CallSecView(doctorName: '', doctorImage: '', phoneNumber: '',)

@@ -141,7 +141,8 @@ class _NewAppointmentviewState extends State<NewAppointmentview> {
                 ],
               ),
               SizedBox(height: 5,),
-              Column(children:
+              Column(
+                  children:
               List.generate(3, (row) {
               return Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

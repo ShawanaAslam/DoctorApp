@@ -3,7 +3,10 @@ import 'package:doctorapp/controller/widgets/button_widget.dart';
 import 'package:doctorapp/controller/widgets/mytextformfield.dart';
 import 'package:doctorapp/controller/widgets/profileFormFieldWidget.dart';
 import 'package:doctorapp/controller/widgets/text_widget.dart';
+import 'package:doctorapp/provider/providerView/profile/secProfile.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../../controller/constants/images.dart';
 class Profile extends StatefulWidget {
@@ -110,7 +113,9 @@ class _ProfileState extends State<Profile> {
               ),
               ProfileFormfieldwidget(txt: ''),
               SizedBox(height: 10,),
-              ButtonWidget(txt: 'Done', ontp: (){})
+              ButtonWidget(txt: 'Save Changes', ontp: (){
+                Get.to(()=>SecProfile());
+              })
 
             ],
           ),

@@ -1,6 +1,9 @@
 
 import 'dart:io';
+import 'package:doctorapp/provider/providerView/AvailabilityView/availabilityView.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:image_picker/image_picker.dart';
 
 import 'package:doctorapp/controller/constants/colors.dart';
@@ -180,12 +183,11 @@ class _KycBeginsViewState extends State<KycBeginsView> {
               ),
 
                SizedBox(height: 10),
-              // ButtonWidget(txt: 'Done', ontp: () {}),
-              // SizedBox(height: 10),
-              // ButtonWidget(txt: 'Not Now', ontp: () {}),
+
     // nxt button
     GestureDetector(
     onTap: () {
+      Get.to(()=>AvailabilityView());
     setState(() {
     selectedButton = "Next";
     });
@@ -200,7 +202,7 @@ class _KycBeginsViewState extends State<KycBeginsView> {
     border: Border.all(color: Colors.black),
     ),
     child: Text(
-    "Done",
+    "Next",
     style: TextStyle(
     color: selectedButton == "done"
     ? Colors.white
@@ -242,7 +244,10 @@ class _KycBeginsViewState extends State<KycBeginsView> {
     fontWeight: FontWeight.bold,
     ),
     ),
-    ))],
+    )
+    )
+            ],
+
           ),
         ),
 
