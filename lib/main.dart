@@ -1,6 +1,7 @@
 import 'package:doctorapp/controller/routing/routing.dart';
 import 'package:doctorapp/provider/providerView/Appointment/appointment.dart';
 import 'package:doctorapp/provider/providerView/AvailabilityView/availabilityView.dart';
+import 'package:doctorapp/provider/providerView/BottomNavBar/bottomNavBar.dart';
 import 'package:doctorapp/provider/providerView/History/historyView.dart';
 import 'package:doctorapp/provider/providerView/KycBegins/kycBeginsView.dart';
 import 'package:doctorapp/provider/providerView/ProfessionalKyc/professionalKycView.dart';
@@ -90,8 +91,9 @@ class MyApp extends StatelessWidget {
 
 
         home:
+        CustomNavBarScreen()
         //AvailabilityView()
-        ClientView()
+        //ClientView()
         //Appointment()
         //WalletView()
        // HistoryScreen()
