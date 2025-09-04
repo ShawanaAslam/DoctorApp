@@ -88,7 +88,7 @@ class WalletView extends StatelessWidget {
               ),
             ),
 
-             SizedBox(height: 250),
+             SizedBox(height: 200),
 
             // ----------- Withdraw Button -----------
             ButtonWidget(txt: 'Request Withdraw', ontp: () {
