@@ -9,6 +9,7 @@ import 'package:get/get_core/src/get_main.dart';
 
 import '../../../controller/constants/colors.dart';
 import '../../../controller/widgets/text_widget.dart';
+import '../../../provider/authView/loginView/loginView.dart';
 
 class SetPasword extends StatefulWidget {
   const SetPasword({super.key});

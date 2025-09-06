@@ -1,4 +1,5 @@
 import 'package:doctorapp/controller/routing/routing.dart';
+import 'package:doctorapp/firebase_options.dart';
 import 'package:doctorapp/provider/providerView/Appointment/appointment.dart';
 import 'package:doctorapp/provider/providerView/AvailabilityView/availabilityView.dart';
 import 'package:doctorapp/provider/providerView/BottomNavBar/bottomNavBar.dart';
@@ -50,13 +51,23 @@ import 'package:doctorapp/views/home_view/settingView/settingView.dart';
 import 'package:doctorapp/views/starting_view/onboaring_view/onboarding_view.dart';
 import 'package:doctorapp/views/starting_view/splash_view/splash_view.dart';
 import 'package:doctorapp/views/starting_view/welcome_view/welcome_view.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+
+     options: DefaultFirebaseOptions.currentPlatform
+    //  (
+    //   apiKey: "AIzaSyBtZTIGR-wo3YwJIOuWpj_mB5P0p1StLIw",
+    // appId: "1:836795650404:web:062bf4183884eee3ac2a71",
+    //messagingSenderId: "836795650404",
+    //projectId: "projectmanagement-e7efa")
+  );
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -91,7 +102,7 @@ class MyApp extends StatelessWidget {
 
 
         home:
-        CustomNavBarScreen()
+      //CustomNavBarScreen()
         //AvailabilityView()
         //ClientView()
         //Appointment()
@@ -140,7 +151,7 @@ class MyApp extends StatelessWidget {
       //WelcomeView()
       //OnboardingView()
       // SignUpScroll()
-     // SplashView()
+      SplashView()
       //const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

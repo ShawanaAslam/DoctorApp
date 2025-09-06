@@ -5,6 +5,7 @@ import 'package:doctorapp/views/starting_view/welcome_view/welcome_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../provider/authView/loginView/loginView.dart';
 import '../../views/auth_view/login_view/loginView.dart';
 import '../../views/home_view/BottomNavigationBar/BottomNavigationBar.dart';
 

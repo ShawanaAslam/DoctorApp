@@ -10,6 +10,7 @@ import '../../../controller/widgets/button_widget.dart';
 import '../../../controller/widgets/mytextformfield.dart';
 import '../../../controller/widgets/text_widget.dart';
 import '../../../views/auth_view/login_view/loginView.dart';
+import '../loginView/loginView.dart';
 
 
 class Signupsec extends StatelessWidget {

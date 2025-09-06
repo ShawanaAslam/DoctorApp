@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../controller/constants/colors.dart';
+import '../../../provider/authView/loginView/loginView.dart';
 
 class WelcomeView extends StatefulWidget {
   const WelcomeView({super.key});

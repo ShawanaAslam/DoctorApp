@@ -8,6 +8,7 @@ class ProfileFormfieldwidget extends StatelessWidget {
  // String? txt2;
   IconData? icn;
   Color? bckclr;
+  TextEditingController ?controller;
 //VoidCallback ontp;
   IconData? icn1;
    ProfileFormfieldwidget({super.key,
@@ -18,7 +19,8 @@ class ProfileFormfieldwidget extends StatelessWidget {
   //required this.ontp,
      //this.txt2
      this.icn,
-     this.icn1
+     this.icn1,
+      this.controller
   });
 
   final FocusNode _focusNode = FocusNode();
@@ -27,6 +29,7 @@ class ProfileFormfieldwidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       onTap: ontp,
+      controller: controller,
       decoration: InputDecoration(
        // suffix: Text(''),
           filled: true,
