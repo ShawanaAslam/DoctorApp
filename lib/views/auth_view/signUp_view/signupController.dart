@@ -177,7 +177,9 @@ class SignupController extends GetxController {
     try {
       String docId = FirebaseAuth.instance.currentUser!.uid;
 
-      await FirebaseFirestore.instance.collection('UserData').doc(docId).set({
+      // doctorData use collection name for doctor app
+      await FirebaseFirestore.instance.collection('userData').doc(docId).set({
+        'roll':'user',
         'name': username.value,
         'email': useremail.value,
         'gender': genderController.text.trim(),
@@ -190,3 +192,7 @@ class SignupController extends GetxController {
   }
 }
 
+// kyc---->
+// Firefirestore.instance.collection('doctorData').doc(currentuserId).collection(kyc).doc(curentdateAndtime).set({
+// fields
+// })

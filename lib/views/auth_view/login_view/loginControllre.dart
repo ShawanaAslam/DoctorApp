@@ -31,7 +31,7 @@ class LoginController extends GetxController {
       );
 
       if (userCredential.user != null) {
-        confirmToastMessage(context, "Login Successful 🎉");
+        confirmToastMessage(context, "Login Successful");
 
         // ✅ Navigate to BottomNavView
        // Get.offAll(() => BottomNavView());
