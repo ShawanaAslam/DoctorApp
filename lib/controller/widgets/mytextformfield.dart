@@ -88,11 +88,11 @@ class MyTextformfield extends StatelessWidget {
         }
 
         // ✅ Username Validation
-        if (hnttxt.toLowerCase().contains("user")) {
-          if (!RegExp(r'^[A-Za-z][A-Za-z0-9_]{3,15}$').hasMatch(value)) {
-            return 'Username must start with a letter\n(min 4 chars, only letters, numbers, _ allowed)';
-          }
-        }
+        // if (hnttxt.toLowerCase().contains("user")) {
+        //   if (!RegExp(r'^[A-Za-z][A-Za-z0-9_]{3,15}$').hasMatch(value)) {
+        //     return 'Username must start with a letter\n(min 4 chars, only letters, numbers, _ allowed)';
+        //   }
+        // }
 
         // ✅ Email Validation
         if (hnttxt.toLowerCase().contains("email")) {
@@ -108,26 +108,26 @@ class MyTextformfield extends StatelessWidget {
           }
         }
 
-        // ✅ Password Validation
-        if (hnttxt.toLowerCase().contains("password")) {
-          if (value.length < 8) {
-            return 'Password must be at least 8 characters long';
-          }
-          if (!RegExp(r'^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$')
-              .hasMatch(value)) {
-            return 'Password must contain letters, numbers & special characters';
-          }
-        }
+        // // ✅ Password Validation
+        // if (hnttxt.toLowerCase().contains("password")) {
+        //   if (value.length < 8) {
+        //     return 'Password must be at least 8 characters long';
+        //   }
+        //   if (!RegExp(r'^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$')
+        //       .hasMatch(value)) {
+        //     return 'Password must contain letters, numbers & special characters';
+        //   }
+        // }
 
-        // ✅ Confirm Password Validation
-        if (hnttxt.toLowerCase().contains("confirm")) {
-          // ye confirm password wali validation tab kaam karegi
-          // jab compare karne ke liye ek "passwordController" bhi pass karenge
-          // abhi ke liye just check kar dete hain empty na ho
-          if (value.length < 8) {
-            return 'Confirm password must be valid';
-          }
-        }
+        // // ✅ Confirm Password Validation
+        // if (hnttxt.toLowerCase().contains("confirm")) {
+        //   // ye confirm password wali validation tab kaam karegi
+        //   // jab compare karne ke liye ek "passwordController" bhi pass karenge
+        //   // abhi ke liye just check kar dete hain empty na ho
+        //   if (value.length < 8) {
+        //     return 'Confirm password must be valid';
+        //   }
+        // }
 
         return null;
       },

@@ -156,7 +156,9 @@ class SignupView extends StatelessWidget {
                         : ButtonWidget(
                       txt: 'Next',
                       ontp: () {
-                        if (_formKey.currentState!.validate()) {
+                        print('----------------------1');
+                        if (_formKey.currentState!.validate())
+                        {
                           // ✅ Password matching check
                           if (signupController.passwordController.text !=
                               signupController.confirmController.text) {
@@ -168,6 +170,7 @@ class SignupView extends StatelessWidget {
                               colorText: Colors.white,
                             );
                           } else {
+                            print('--------------signup next button calling------');
                             signupController.onSignup(context);
                           }
                         } else {

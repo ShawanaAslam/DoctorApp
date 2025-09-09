@@ -51,7 +51,7 @@ class _WelcomeViewState extends State<WelcomeView> {
                   isLoginSelected = true;
                 });
                 //  Get.toNamed('/LoginView');
-                Get.to(()=>LoginView());
+                //Get.to(()=>LoginView());
               },
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 100, vertical: 12),
